@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bgLight text-textMain font-sans antialiased;
+    font-family: 'Inter', 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-bold text-textMain;
+  }
+
+  a {
+    @apply text-accent hover:underline transition;
+  }
+
+  ::selection {
+    background-color: #64ffda40; /* semi-transparent green */
+    color: #ffffff;
+  }
+
+  code {
+    @apply font-mono text-sm text-accent;
+  }
+
+  button {
+    @apply font-mono uppercase tracking-wider text-sm;
+  }
+}
+
+.underline-animate {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-animate::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0%;
+  background-color: #64ffda;
+  transition: width 0.3s ease-out;
+}
+
+.underline-animate:hover::after {
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out both;
+}
