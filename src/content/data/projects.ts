@@ -7,10 +7,10 @@ export interface ProjectEntry {
 
 export const projects: ProjectEntry[] = [
   {
-    title: 'Uni-Crew',
-    desc: 'A university student platform for discovering and joining campus clubs. Full-stack web application with registration, club directory, dynamic forms, and user collaboration features.',
-    url: 'https://github.com/tade-art/Uni-Crew',
-    tech: ['React', 'TypeScript', 'Chakra UI', 'Express', 'PostgreSQL', 'Prisma'],
+    title: 'Tenaro',
+    desc: 'A productivity app designed to help with task management, time tracking, and staying focused. It provides a simple, clean interface to organize tasks, manage priorities, and boost daily productivity.',
+    url: 'https://github.com/tade-art/Tenaro',
+    tech: ['React', 'TypeScript', 'TailwindCSS', 'Express', 'PostgreSQL', 'Prisma ORM'],
   },
   {
     title: 'Auction System',
